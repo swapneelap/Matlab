@@ -1,7 +1,10 @@
 tic
-% Adding 
+% Adding
+global k
+global points
+points=[];
 global lines
-lines=zeros(1,4);
+lines=[];
 a = imread('test6.jpg');
 b = rgb2gray(a);
 dim = size(b);
@@ -11,6 +14,7 @@ c=im2bw(b,level);
 d = imcomplement(c); 
 e = bwmorph(d,'shrink',inf);
 f = 255*uint8(e);
+global cord_vert
 cord_vert=[];
 for i=2:dim(1)-1
     for j=2:dim(2)-1

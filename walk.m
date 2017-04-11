@@ -1,7 +1,7 @@
-function walk(x,y,k)
-set(0,'RecursionLimit',5000)
-global lines
-%k = om;
+function a=walk(x,y,om)
+%global vert
+global k
+k = om;
 k(x,y)=k(x,y)-1;
 for p=(x-1):(x+1)
     stp=0;
@@ -10,8 +10,7 @@ for p=(x-1):(x+1)
             %k(p,q)=k(p,q)-1;
             walk(p,q,k)
         elseif k(p,q)==150
-            lines=[lines ; [p,q]];
-            %walk(p,q,k)
+            a=[p,q];
             stp=1;
             break
          end
@@ -20,4 +19,4 @@ for p=(x-1):(x+1)
             break
     end
 end
-end
+end              
