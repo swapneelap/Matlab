@@ -1,4 +1,4 @@
-function walk(x,y,k)
+function edge(x,y,k)
 set(0,'RecursionLimit',5000)
 global lines
 %k = om;
@@ -8,10 +8,10 @@ for p=(x-1):(x+1)
      for q=(y-1):(y+1)
          if k(p,q)==255
             %k(p,q)=k(p,q)-1;
-            walk(p,q,k)
+            edge(p,q,k)
         elseif k(p,q)==150
-            lines=[lines ; [p,q]];
-            %walk(p,q,k)
+            lines=[lines ; [x,y,p,q]];
+            %edge(p,q,k)
             stp=1;
             break
          end

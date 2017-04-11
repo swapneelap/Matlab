@@ -1,8 +1,8 @@
 tic
-%cd C:\Users\karthik\Downloads\
-global vert
-vert=[];
-a = imread('foam.jpg');
+% Adding 
+global lines
+lines=zeros(1,4);
+a = imread('test6.jpg');
 b = rgb2gray(a);
 dim = size(b);
 %t = imbinarize(c);
@@ -24,7 +24,8 @@ for i=2:dim(1)-1
         end
         if s>=4
             f(i,j)=150;
-            cord_vert=[cord_vert ; [i j]];
+            count=size(cord_vert);
+            cord_vert=[cord_vert ; [count(1)+1 i j]];
         end
     end
 end
@@ -39,5 +40,5 @@ om = f;
 % end
 imtool(om)
 %walk(135,240,om)
-
+%save vert.txt cord_vert -ASCII %To be used later
 toc
