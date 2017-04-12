@@ -12,6 +12,7 @@ for p=(x-1):(x+1)
             %k(p,q)=k(p,q)-1;
             edge(p,q,k)
         elseif k(p,q)==150
+            k(p,q)=k(p,q)-1;
             points=[points ; [p,q]];
             %edge(p,q,k)
             stp=1;

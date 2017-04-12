@@ -7,9 +7,10 @@ for p=(x-1):(x+1)
     stp=0;
      for q=(y-1):(y+1)
          if k(p,q)==255
-            %k(p,q)=k(p,q)-1;
+            k(p,q)=k(p,q)-1;
             walk(p,q,k)
         elseif k(p,q)==150
+            k(p,q)=k(p,q)-1;
             a=[p,q];
             stp=1;
             break

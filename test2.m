@@ -1,10 +1,11 @@
 tic
 % Adding
+global check
 global k
 global points
 points=[];
 global lines
-lines=[];
+lines=zeros(0,3);
 a = imread('test6.jpg');
 b = rgb2gray(a);
 dim = size(b);
@@ -26,7 +27,7 @@ for i=2:dim(1)-1
                 end
             end
         end
-        if s>=4
+        if s>=4 && f(i-1,j-1)~=150 && f(i,j-1)~=150 && f(i+1,j-1)~=150 && f(i-1,j)~=150 && f(i+1,j)~=150 && f(i-1,j+1)~=150 && f(i,j+1)~=150 && f(i+1,j+1)~=150
             f(i,j)=150;
             count=size(cord_vert);
             cord_vert=[cord_vert ; [count(1)+1 i j]];
