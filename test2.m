@@ -6,7 +6,7 @@ global points
 points=[];
 global lines
 lines=zeros(0,3);
-a = imread('foam.jpg');
+a = imread('fly1.jpg');
 b = rgb2gray(a);
 dim = size(b);
 %t = imbinarize(c);
