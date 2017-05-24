@@ -6,7 +6,7 @@ global points
 points=[];
 global lines
 lines=zeros(0,3);
-a = imread('fly1.jpg');
+a = imread('foam.jpg');
 b = rgb2gray(a);
 dim = size(b);
 %t = imbinarize(c);
@@ -29,8 +29,8 @@ for i=2:dim(1)-1
         end
         if s>=4 && f(i-1,j-1)~=150 && f(i,j-1)~=150 && f(i+1,j-1)~=150 && f(i-1,j)~=150 && f(i+1,j)~=150 && f(i-1,j+1)~=150 && f(i,j+1)~=150 && f(i+1,j+1)~=150
             f(i,j)=150;
-            count=size(cord_vert);
-            cord_vert=[cord_vert ; [count(1)+1 i j]];
+            %count=size(cord_vert);
+            %cord_vert=[cord_vert ; [count(1)+1 i j]];
         end
     end
 end
@@ -43,7 +43,7 @@ om = f;
 %         end
 %     end
 % end
-imtool(om)
+imtool(f)
 %walk(135,240,om)
 %save vert.txt cord_vert -ASCII %To be used later
 toc
