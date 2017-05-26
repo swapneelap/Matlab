@@ -1,7 +1,7 @@
 function [out] = walk2(x,y,img)
+% One thing i can think of right now is putting img as a global veriable
 set(0,'RecursionLimit',1000)
 count1=0;
-error1='hit the wall';
 img(x,y)=img(x,y)+1;
 for p = (x-1):(x+1)
 	stp=0;
