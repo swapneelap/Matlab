@@ -1,8 +1,10 @@
-function [out] = walk2(x,y,img)
+function [out] = walk2(x,y,image)
 % One thing i can think of right now is putting img as a global veriable
 set(0,'RecursionLimit',1000)
-count1=0;
-img(x,y)=img(x,y)+1;
+global img
+img = image; 
+count1 = 0;
+%img(x,y)=img(x,y)+1;
 for p = (x-1):(x+1)
 	stp=0;
 	for q = (y-1):(y+1)
