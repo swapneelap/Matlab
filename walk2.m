@@ -4,7 +4,7 @@ set(0,'RecursionLimit',1000)
 global img
 img = image; 
 count1 = 0;
-%img(x,y)=img(x,y)+1;
+img(x,y)=img(x,y)+1;
 for p = (x-1):(x+1)
 	stp=0;
 	for q = (y-1):(y+1)
@@ -12,6 +12,7 @@ for p = (x-1):(x+1)
 			out=[p,q];
 			img(p,q)=img(p,q)+1;
 			stp=1;
+			imtool(img)
 		elseif img(p,q)==255
 			count1=count1+1;
 		end

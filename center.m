@@ -1,4 +1,5 @@
 tic
+global stack;
 global img
 a = rgb2gray(imread('foam.jpg'));
 dim = size(a);
