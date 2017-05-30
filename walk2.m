@@ -20,7 +20,7 @@ for p = (x-1):(x+1)
 		break
 	end
 end
-if count1<2
+if count1<2 && stp~=1
 	for a = (x-1):(x+1)
 		for b = (y-1):(y+1)
 			if img(a,b)==0
