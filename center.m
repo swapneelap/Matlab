@@ -1,5 +1,5 @@
 tic
-global stack;
+global stack1;
 global img
 a = rgb2gray(imread('foam.jpg'));
 dim = size(a);
@@ -14,7 +14,6 @@ for i=1:dim(1)
 		end
 	end
 end
-%imtool(d)
 e = logical(d);
 f = bwmorph(e,'shrink',inf);
 g = bwmorph(c,'shrink',inf);
@@ -31,8 +30,6 @@ for i=2:dim(1)-1
         end
         if count>=4 && final(i-1,j-1)~=150 && final(i,j-1)~=150 && final(i+1,j-1)~=150 && final(i-1,j)~=150 && final(i+1,j)~=150 && final(i-1,j+1)~=150 && final(i,j+1)~=150 && final(i+1,j+1)~=150
             final(i,j)=150;
-            %count=size(cord_vert);
-            %cord_vert=[cord_vert ; [count(1)+1 i j]];
         end
     end
 end
