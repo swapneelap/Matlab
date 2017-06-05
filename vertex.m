@@ -4,7 +4,7 @@ global xmin
 global xmax
 inter=[];
 elephantwalk(x,y,image)
-unsorted_mat= stack1
+unsorted_mat= stack1;
 xmin = min(unsorted_mat(:,1));
 xmax = max(unsorted_mat(:,1));
 [~, indexi] = ismember(xmin,unsorted_mat);
