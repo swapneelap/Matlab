@@ -29,5 +29,8 @@ if count1<2 && stp~=1
 			end
 		end
 	end
+elseif count1==2 && stp~=1
+       	swapneel=1
+	elephantwalk(x,y,img)
 end
 end
