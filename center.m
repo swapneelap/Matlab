@@ -28,7 +28,7 @@ for i=2:dim(1)-1
                 end
             end
         end
-        if count>=4 && final(i-1,j-1)~=150 && final(i,j-1)~=150 && final(i+1,j-1)~=150 && final(i-1,j)~=150 && final(i+1,j)~=150 && final(i-1,j+1)~=150 && final(i,j+1)~=150 && final(i+1,j+1)~=150
+        if count>=4 && final(i-1,j-1)~=150 && final(i,j-1)~=150 && final(i+1,j-1)~=150 && final(i-1,j)~=150 && final(i+1,j)~=150 && final(i-1,j+1)~=150 && final(i,j+1)~=150 && final(i+1,j+1)~=150 && adjcheck(i,j,final)==1
             final(i,j)=150;
         end
     end
