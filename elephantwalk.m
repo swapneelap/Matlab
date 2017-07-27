@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                         ELEPHANT WALK AND CHECK FUNCTION                                             
+% The name of the
+
 function [out] = elephantwalk(x,y,image)
 set(0,'RecursionLimit',1000)
 global stack1;
