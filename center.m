@@ -5,7 +5,7 @@
 
 tic
 global stack1;
-global img
+global img;
 image_1 = rgb2gray(imread('foam.jpg'));  % Loading an image and converting to grayscale. Replace 'foam.jpg' with your file.
 dim = size(image_1);  % Storing the dimentions of the image for loops later.
 level = graythresh(image_1); % Storing gray threshold for convertion to binary for grayscale.
