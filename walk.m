@@ -1,7 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                 WALK FUNCTION
+% The function mounts itself on white(255) pixels and breaks when it hits a gray(150) pixel and outputs
+% the coordinates of that pixel.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 function a=walk(x,y,om)
-%global vert
 global k
-k = om;
+k = om; % This the image to be used in the function.
 k(x,y)=k(x,y)-1;
 for p=(x-1):(x+1)
     stp=0;

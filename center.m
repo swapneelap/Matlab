@@ -34,12 +34,12 @@ for i=2:dim(1)-1
         count=0;
         for m=(i-1):(i+1)
             for n=(j-1):(j+1)
-                if image_final(m,n)==255 && image_final(i,j)~=0
+                if image_final(m,n)==255 && image_final(i,j)~=0 % Counting number of white(255) neighbours.
                     count=count+1;
                 end
             end
         end
-        if count>=4 && image_final(i-1,j-1)~=150 && image_final(i,j-1)~=150 && image_final(i+1,j-1)~=150 && image_final(i-1,j)~=150 && image_final(i+1,j)~=150 && image_final(i-1,j+1)~=150 && image_final(i,j+1)~=150 && image_final(i+1,j+1)~=150 && adjcheck(i,j,image_final)==1
+        if count>=4 && image_final(i-1,j-1)~=150 && image_final(i,j-1)~=150 && image_final(i+1,j-1)~=150 && image_final(i-1,j)~=150 && image_final(i+1,j)~=150 && image_final(i-1,j+1)~=150 && image_final(i,j+1)~=150 && image_final(i+1,j+1)~=150 && adjcheck(i,j,image_final)==1 % Conditions to be a vertex.
             image_final(i,j)=150; % adjcheck() is a function defined to smoothen the process, the function file contains the discription. 
         end
     end
